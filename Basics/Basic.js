@@ -11,3 +11,17 @@ function searchElement(arr , x){
 }
 let result = searchElement(arr , 4);
 console.log(result);
+
+// 2. WAP that returns the counts of all negetive numbers occured in an array
+
+function countNegative(arr){
+    let count = 0;
+    for(let i=0 ; i<arr.length ; i++){
+        if(arr[i]<0){
+            count = count+1;
+        }
+    }
+    return count
+}
+let result = countNegative(arr);
+console.log(result);
