@@ -25,3 +25,43 @@ function countNegative(arr){
 }
 let result = countNegative(arr);
 console.log(result);
+
+// 3. Find The Largest Number in an Array
+
+function findLargest(arr){
+    let max = -1; // This will not work for array containinig NEGATIVE Numbers 
+     for(let i=0 ; i<arr.length ; i++){
+         if(max<arr[i]){
+             max = arr[i];
+         }
+     }
+     return max;
+}
+let result = findLargest(arr);
+console.log(result);            
+
+//This another Solution 
+function findLargest(arr){
+    let max = -Infinity ; // this will work for find all largest number 
+     for(let i=0 ; i<arr.length ; i++){
+         if(max<arr[i]){
+             max = arr[i];
+         }
+     }
+     return max;
+}
+let result = findLargest(arr);
+console.log(result);
+
+
+function findLargest(arr){
+    let max = arr[0] ; // this is the best approach 
+     for(let i=0 ; i<arr.length ; i++){
+         if(max<arr[i]){
+             max = arr[i];
+         }
+     }
+     return max;
+}
+let result = findLargest(arr);
+console.log(result);
