@@ -65,3 +65,17 @@ function findLargest(arr){
 }
 let result = findLargest(arr);
 console.log(result);
+
+// 4. Find the Smallest Number in an Array
+
+function findLargest(arr){
+    let max = arr[0] ;
+     for(let i=0 ; i<arr.length ; i++){
+         if(max>arr[i]){
+             max = arr[i];
+         }
+     }
+     return max;
+}
+let result = findLargest(arr);
+console.log(result);
