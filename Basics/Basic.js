@@ -79,3 +79,58 @@ function findLargest(arr){
 }
 let result = findLargest(arr);
 console.log(result);
+
+// 5. Find The SecondLargest Number in an Array
+
+function secondLargest(arr){
+    let firstLargest = -Infinity;
+    let secondLargest = -Infinity;
+    
+    for(let i=0 ; i<arr.length ; i++){
+        if(firstLargest < arr[i]){
+            secondLargest = firstLargest;
+            firstLargest = arr[i];
+        }
+        else if(secondLargest < arr[i]){
+            secondLargest = arr[i];
+        }
+    }
+    
+    return secondLargest;
+}
+
+let arr = [-3,4,-1,-10];
+let result = secondLargest(arr);
+console.log(result);
+
+// But It will Not a Working Solution for Corner Cases Like
+// Array is Empty
+//Dupplicate Numbers
+// So We have to make it More Efficient
+
+function secondLargest(arr){
+    let firstLargest = -Infinity;
+    let secondLargest = -Infinity;
+    
+    if(arr.length < 2){
+        return "Invalid Array";
+    }
+    
+    for(let i=0 ; i<arr.length ; i++){
+        if(firstLargest < arr[i]){
+            secondLargest = firstLargest;
+            firstLargest = arr[i];
+        }
+        else if(secondLargest < arr[i] && arr[i] != firstLargest){
+            secondLargest = arr[i];
+        }
+    }
+    
+    return secondLargest;
+}
+
+let arr = [1,4,5,2,4,7,8,8,0];
+// let arr = [1,2]
+
+let result = secondLargest(arr);
+console.log(result);
