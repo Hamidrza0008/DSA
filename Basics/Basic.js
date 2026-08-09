@@ -134,3 +134,19 @@ let arr = [1,4,5,2,4,7,8,8,0];
 
 let result = secondLargest(arr);
 console.log(result);
+
+// 6. WAP to make a star pattern of n by n
+
+function makePattern(n){
+    for(let i = 0; i < n; i++){
+        let row = "";
+
+        for(let j = 0; j < n; j++){
+            row += "* ";
+        }
+
+        console.log(row);
+    }
+}
+
+makePattern(4);
