@@ -224,4 +224,28 @@ function makePatterns(n){
 
 console.log(makePatterns(5));
 
+// 9. Pattern Like This
+
+// 1 
+// 2 2 
+// 3 3 3 
+// 4 4 4 4 
+// 5 5 5 5 5 
+
+function makePatterns(n){
+    let pattern = "";
+    
+    for(let i=1 ; i<=n ; i++){
+        let row = "";
+        for(let j=1 ; j<=i ; j++){
+            row+= i+" ";
+        }
+        pattern += row + "\n";
+    }
+    
+    return pattern
+}
+    
+
+console.log(makePatterns(5));
 
