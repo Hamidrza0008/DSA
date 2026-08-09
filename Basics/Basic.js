@@ -149,4 +149,53 @@ function makePattern(n){
     }
 }
 
-makePattern(4);
+makePattern(4); // it will give one undiefined output at last
+
+n=4  // you can give any numbers
+    for(let i=0 ; i<n ; i++){
+        let row ="";
+        for(let j=0 ; j<n ; j++){
+            row = row+"* ";
+        }
+        console.log(row);
+}
+
+// Here is the best Solution
+function makePatterns(n){
+    let pattern = "";
+    for(let i=0 ; i<n ; i++){
+        let row ="";
+        for(let j=0 ; j<n ; j++){
+            row = row+"* ";
+        }
+        pattern = pattern + row + "\n";
+    }
+    
+    return pattern
+}
+console.log(makePatterns(4));
+
+
+// 7.  WAP to make Patterns Like this
+
+// * 
+// * * 
+// * * * 
+// * * * * 
+
+function makePatterns(n){
+    let pattern = "";
+    
+    for(let i=0 ; i<n ; i++){
+        let row = "";
+        for(let j=0 ; j<i+1 ; j++){
+            row = row + "* ";
+        }
+        pattern += row + "\n";
+    }
+    
+    return pattern
+}
+    
+
+console.log(makePatterns(4));
