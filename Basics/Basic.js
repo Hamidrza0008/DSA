@@ -323,21 +323,49 @@ console.log(makePattern(5));
 // 1 0 1 0 
 // 1 0 1 0 1 
 
-function makePattern(n){
+function makePattern(n) {
     let pattern = "";
-    for(let i=0 ; i<n ; i++){
+    for (let i = 0; i < n; i++) {
         let row = "";
         let toggle = 1
-        for(let j=0 ; j<i+1 ; j++){
-            row += toggle + " " ;
-            if(toggle==1){
-                toggle=0;
+        for (let j = 0; j < i + 1; j++) {
+            row += toggle + " ";
+            if (toggle == 1) {
+                toggle = 0;
             }
-            else{
+            else {
                 toggle = 1;
             }
         }
-        pattern+= row + "\n";
+        pattern += row + "\n";
+    }
+    return pattern
+}
+
+console.log(makePattern(5));
+
+// 14.
+// 1 
+// 0 1 
+// 0 1 0 
+// 1 0 1 0 
+// 1 0 1 0 1
+
+function makePattern(n) {
+    let pattern = "";
+    let toggle = 1
+    for (let i = 0; i < n; i++) {
+        let row = "";
+        for (let j = 0; j < i + 1; j++) {
+            row += toggle + " ";
+            if (toggle == 1) {
+                toggle = 0;
+            }
+            else {
+                toggle = 1;
+            }
+        }
+        pattern += row + "\n";
     }
     return pattern
 }
