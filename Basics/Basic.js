@@ -277,14 +277,39 @@ console.log(makePattern(5));
 // * * 
 // *
 
-function makePattern(n){
+function makePattern(n) {
     let pattern = "";
-    for(let i=0 ; i<=n ; i++){
+    for (let i = 0; i <= n; i++) {
         let row = "";
-        for(let j=1 ; j<=n-i ; j++){
-            row += "*" +" ";
+        for (let j = 1; j <= n - i; j++) {
+            row += "*" + " ";
         }
-        pattern+= row + "\n";
+        pattern += row + "\n";
+    }
+    return pattern;
+}
+
+console.log(makePattern(5));
+
+// 12. 
+// _ _ _ _ * 
+// _ _ _ * * 
+// _ _ * * * 
+// _ * * * * 
+// * * * * * 
+
+function makePattern(n) {
+    let pattern = "";
+    for (let i = 0; i < n; i++) {
+        let row = "";
+        for (let j = 0; j < n - (i + 1); j++) {
+            row += "_" + " ";
+        }
+        for (let k = 0; k < i + 1; k++) {
+            row += "* ";
+        }
+
+        pattern += row + "\n";
     }
     return pattern;
 }
