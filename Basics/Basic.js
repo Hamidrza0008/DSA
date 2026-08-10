@@ -269,3 +269,24 @@ function makePattern(n) {
 }
 
 console.log(makePattern(5));
+
+// 11. pattern like this 
+// * * * * * 
+// * * * * 
+// * * * 
+// * * 
+// *
+
+function makePattern(n){
+    let pattern = "";
+    for(let i=0 ; i<=n ; i++){
+        let row = "";
+        for(let j=1 ; j<=n-i ; j++){
+            row += "*" +" ";
+        }
+        pattern+= row + "\n";
+    }
+    return pattern;
+}
+
+console.log(makePattern(5));
