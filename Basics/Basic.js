@@ -371,3 +371,34 @@ function makePattern(n) {
 }
 
 console.log(makePattern(5));
+
+// 15. WAP to count the number of digits in an givern number 
+
+function countDigits(num){
+    let count = 0;
+    while(num>0){
+        num = Math.floor(num/10);
+        count++;
+    }
+    return count;
+}
+console.log(countDigits(192))
+
+
+// this upper solution is not a complete solutions because of some corner cases 
+// like given number is 0 or a negetive number , 
+// so here is complete solution 
+
+function countDigits(n){
+    
+    if(n==0) return 1;
+    
+    let count = 0;
+    n = Math.abs(n);
+    while(n>0){
+        n = Math.floor(n/10);
+        count++;
+    }
+    return count;
+}
+console.log(countDigits(-10))
