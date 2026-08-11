@@ -402,3 +402,19 @@ function countDigits(n){
     return count;
 }
 console.log(countDigits(-10))
+
+// 16. WAP to Check Given Number is Palendrom Or Not
+
+function isPalendrome(n){
+    if(n<0) return false
+    let nCopy = n;
+    let rev = 0
+    while(n>0){
+        let rem = n%10;
+        rev = (rev*10) + rem;
+        n = Math.floor(n/10);
+    }
+    return rev == nCopy
+}
+
+console.log(isPalendrome(12121))
