@@ -417,4 +417,23 @@ function isPalendrome(n){
     return rev == nCopy
 }
 
-console.log(isPalendrome(12121))
+console.log(isPalendrome(12121));
+
+// 17. Reverse an integer
+
+function ReverseInterger(n){
+    let ReversedInt = ""
+    if(n<0){
+        ReversedInt = "-";
+    }
+    n = Math.abs(n);
+
+    while (n > 0){
+        let lastInt = n%10;
+        ReversedInt += lastInt + " ";
+        n = Math.floor(n/10);
+    }
+    return ReversedInt;
+}
+
+console.log(ReverseInterger(-123))
