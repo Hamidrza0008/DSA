@@ -487,3 +487,25 @@ function checkSorted(array){
 }
 
 console.log(checkSorted(array2));
+
+// 21. Second smallest distinct element find karo.
+
+let array = [-1,-3,4,5,7,9,2,4,8]
+
+function secondSmallest(array){
+    let firstSmallest = Infinity;
+    let secondSmallest = Infinity;
+
+    for(let i=0 ; i<array.length ; i++){
+        if(firstSmallest>array[i]){
+            secondSmallest=firstSmallest;            firstSmallest=array[i];
+            
+        }
+        else if(secondSmallest>array[i] && array[i] != firstSmallest){
+            secondSmallest = array[i];
+        }
+    }
+
+    return secondSmallest;
+}
+console.log(secondSmallest(array));
