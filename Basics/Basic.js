@@ -470,3 +470,20 @@ function reverseArray(array){
 }       
 
 console.log(reverseArray(array));
+
+// 20. Array sorted ascending hai ya nahi check karo.
+
+let array1 = [1,2,3,4,5] // true
+let array2 = [1,-3,2,4,0] // false
+
+function checkSorted(array){
+    for(let i=0 ; i<array.length ; i++){
+        if(array[i]>array[i+1]){
+            console.log(`${array[i]} ${array[i+1]}`);
+            return false 
+        }
+    }
+    return true
+}
+
+console.log(checkSorted(array2));
