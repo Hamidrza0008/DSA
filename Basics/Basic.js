@@ -454,3 +454,19 @@ const sum = (array) => {
 }
 console.log(sum(array));
 
+// 19. Array mein positive, negative aur zero count karo.
+
+let array = [1,2,3] // [3,2,1]
+
+function reverseArray(array){
+    let reversed = [];
+
+    for(let i=array.length-1 ; i>=0 ; i--){
+        console.log(array[i]);
+        reversed.push(array[i]);
+    }
+
+    return reversed
+}       
+
+console.log(reverseArray(array));
