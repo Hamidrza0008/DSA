@@ -437,3 +437,20 @@ function ReverseInterger(n){
 }
 
 console.log(ReverseInterger(-123))
+
+// Questions Practice
+
+// 18. Array mein sum of all elements find karo
+
+let array = [1,2,3,4,5];  // Output  - 15
+
+const sum = (array) => {
+    let result = 0;
+    for(let i=0 ; i<array.length ; i++){
+        console.log(array[i])
+        result += array[i];
+    }
+    return result;
+}
+console.log(sum(array));
+
