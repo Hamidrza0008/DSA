@@ -509,3 +509,36 @@ function secondSmallest(array){
     return secondSmallest;
 }
 console.log(secondSmallest(array));
+
+// 22. Sum Of Digit
+
+let num = 123;
+
+function sumOfNum(num) {
+    let result = 0;
+
+    while (num > 0) {
+        let last = num % 10;
+        result += last;
+        num = Math.floor(num / 10);
+    }
+
+    return result;
+}
+
+console.log(sumOfNum(num)); // 6
+
+let num =  -123;
+
+function sumOfNum(num){
+    let result = 0;
+    num = Math.abs(num)
+    num = String(num);
+
+    for(let i=0 ; i<num.length ; i++){
+        result = Number(result) + Number(num[i])
+    }
+    return result
+}
+
+console.log(sumOfNum(num));
