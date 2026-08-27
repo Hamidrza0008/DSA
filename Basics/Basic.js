@@ -542,3 +542,20 @@ function sumOfNum(num){
 }
 
 console.log(sumOfNum(num));
+
+//23. Number ka largest digit find karo
+let num = 1293;
+function findLargest(num){
+    let largest = -Infinity;
+    while(num>0){
+        let last = num%10;
+        if(largest < last){
+            largest = last
+        }
+        num = Math.floor(num/10);
+    }
+
+    return largest
+}
+
+console.log(findLargest(num));
