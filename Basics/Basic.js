@@ -559,3 +559,25 @@ function findLargest(num){
 }
 
 console.log(findLargest(num));
+
+//24. Array mein duplicate elements find karo
+let array = [1,2,3,5,6,8,10,3,6,1];
+
+function findDuplicate(array){
+    let duplicateElements = []
+    for(let i=0 ; i<array.length ; i++){
+            let count = 0
+        for(let j=0 ; j<array.length ; j++){
+            if(array[i] == array[j]){
+                count ++;
+
+            }
+        }
+            if(count>1 && !duplicateElements.includes(array[i])){
+                duplicateElements.push(array[i]);
+            }
+    }
+
+    return duplicateElements;
+}
+console.log(findDuplicate(array));
