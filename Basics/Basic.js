@@ -581,3 +581,19 @@ function findDuplicate(array){
     return duplicateElements;
 }
 console.log(findDuplicate(array));
+
+//25. Array se duplicates remove karo
+
+let array = [1,2,3,5,6,8,10,3,6,1,-1,-1,-3];
+
+function uniqueArray(array){
+     let newArray = [];
+
+     for(let i=0 ; i<array.length ; i++){
+        if(!newArray.includes(array[i])){
+            newArray.push(array[i])
+        }
+     }
+    return newArray;
+}
+console.log(uniqueArray(array));
