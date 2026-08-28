@@ -622,3 +622,21 @@ function endZero(array){
 }
 
 console.log(endZero(array));
+
+// 27.  1 → n mein missing number find karo.
+let array = [1,2,3,4,5,6,7,9]  // 8
+
+function findMissing(array){
+    let counting = [];
+    for(let i=1 ; i<=array.length+1 ; i++){
+        counting.push(i);
+    }
+
+    for(let i=0 ; i<=array.length ; i++){
+        if(array[i] != counting[i]){
+            return counting[i]
+        }
+    }
+}
+
+console.log(findMissing(array));
