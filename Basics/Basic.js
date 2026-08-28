@@ -597,3 +597,28 @@ function uniqueArray(array){
     return newArray;
 }
 console.log(uniqueArray(array));
+
+// 26. Array mein saare zeros ko end mein move karo.
+
+let array = [0,0,1,0,3,12]  // [1,3,12,0,0]
+
+function endZero(array){
+    let count = 0;
+    let newArray = [];
+
+    for(let i=0 ; i<array.length ; i++){
+        if(array[i]==0){
+            count++;
+            array.splice(i , 1);
+            i--
+        }
+    }
+    newArray = [...array];
+
+    for(let i=0 ; i<count ; i++){
+        newArray.push(0);
+    }
+    return newArray;
+}
+
+console.log(endZero(array));
