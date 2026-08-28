@@ -663,3 +663,36 @@ function findDuplicate(array){
 }
 
 console.log(findDuplicate(array));
+
+// 29. Third largest distinct element find karo.
+
+let array = [1,1,2,3,4,5];
+
+function findThirdLargest(array){
+    let first = -Infinity;
+    let sec = -Infinity;
+    let third = -Infinity;
+
+    let arr = [...new Set(array)]
+    console.log(arr)
+    for(let i=0 ; i<arr.length ; i++){
+        if(first<arr[i]){
+            third =sec;
+            sec = first
+            first=arr[i]; 
+        }
+
+        else if(sec<arr[i]){
+            third = sec;
+            sec = arr[i];
+        }
+
+        else if(third<arr[i]){
+            third = arr[i];
+        }
+    }
+
+    return third
+}
+
+console.log(findThirdLargest(array));
