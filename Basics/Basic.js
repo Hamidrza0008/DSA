@@ -640,3 +640,26 @@ function findMissing(array){
 }
 
 console.log(findMissing(array));
+
+// 28. Array ka first duplicate element find karo.
+
+let array = [1,2,3,3,4,5,6] // 2
+
+function findDuplicate(array){
+
+    let arr = [];
+    for(let i=0 ; i<array.length ; i++){
+        let count=0
+        for(let j=0 ; j<array.length ; j++){
+            if(array[i] == array[j]){
+                count++
+            }
+        }
+        if(count>1 && !arr.includes(array[i])){
+            arr.push(array[i])
+        }
+    }
+    return arr[0]
+}
+
+console.log(findDuplicate(array));
