@@ -717,3 +717,20 @@ function checkPrime(num){
 }
 
 console.log(checkPrime(num));
+
+// 31. Check karo number Armstrong number hai ya nahi
+//153 = 1³ + 5³ + 3³ = 1 + 125 + 27 = 153
+
+let num = 370;
+
+function isArmstrong(num){
+    let sum = 0;
+    let arr = String(num).split("");
+    for(let i=0 ; i<arr.length ; i++){
+        sum += Number(arr[i])**3;
+    }
+    if(sum==num) return true;
+    else return false
+}
+
+console.log(isArmstrong(num))
