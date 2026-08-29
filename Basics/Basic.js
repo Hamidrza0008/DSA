@@ -696,3 +696,24 @@ function findThirdLargest(array){
 }
 
 console.log(findThirdLargest(array));
+
+// 30. Check karo number prime hai ya nahi
+
+let num = 9
+
+function checkPrime(num){
+    let count = 0 ;
+
+    for(let i=1 ; i<=num ; i++){
+        if(num%i==0){
+            count++;
+        }
+    }
+
+    if(count>2) return false
+
+    else return true
+
+}
+
+console.log(checkPrime(num));
