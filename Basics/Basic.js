@@ -755,3 +755,21 @@ function findIntersection(arr1 , arr2){
 
 console.log(findIntersection(arr1 , arr2))
 
+// 33. Do arrays ka union find karo.
+
+let arr1 = [1,2,3,4];
+let arr2 = [3,4,5,6,7,8];
+
+function findUnion(arr1 , arr2){
+    let union = [];
+
+    for(let i=0 ; i<arr2.length ; i++){
+        if(!arr1.includes(arr2[i])){
+            arr1.push(arr2[i]);
+        }
+    }
+
+    return arr1;
+}
+
+console.log(findUnion(arr1 , arr2));
