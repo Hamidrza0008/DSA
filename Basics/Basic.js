@@ -773,3 +773,37 @@ function findUnion(arr1 , arr2){
 }
 
 console.log(findUnion(arr1 , arr2));
+
+// 34. Array mein maximum frequency wala element find karo
+
+const array = [1,2,3,4,5,6,1,2,3,4,5,6,7,1,2,3,4,2 ,2,3,2];
+
+function maximumFrequency(array){
+    let counts = {
+        
+    }
+
+    for(let i=0 ; i<array.length ; i++){
+        let count=0;
+        for(let j=0 ; j<array.length ; j++){
+            if(array[i]==array[j]){
+                count=count+1;
+            }
+        }
+        counts[array[i]] = count;
+    }
+
+    let max = 0;
+    let maxkey;
+
+    for(let key in counts){
+        if(counts[key]>max){
+            max = counts[key];
+            maxkey = key
+        }
+    }
+    
+    return maxkey
+}
+
+console.log(maximumFrequency(array));
