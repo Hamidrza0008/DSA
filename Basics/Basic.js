@@ -827,3 +827,18 @@ function findFirstNonRepeating(array) {
 }
 
 console.log(findFirstNonRepeating(array));
+
+
+// 36. Array mein pair whose sum = target.
+let array = [2, 7, 11, 15]
+let target = 9;   //→ 2,7
+
+function findPair(array, target) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] + array[i + 1] == target) {
+            return [array[i], array[i + 1]]
+        }
+    }
+}
+
+console.log(findPair(array, target));
