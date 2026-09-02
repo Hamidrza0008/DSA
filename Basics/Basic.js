@@ -374,10 +374,10 @@ console.log(makePattern(5));
 
 // 15. WAP to count the number of digits in an givern number 
 
-function countDigits(num){
+function countDigits(num) {
     let count = 0;
-    while(num>0){
-        num = Math.floor(num/10);
+    while (num > 0) {
+        num = Math.floor(num / 10);
         count++;
     }
     return count;
@@ -389,14 +389,14 @@ console.log(countDigits(192))
 // like given number is 0 or a negetive number , 
 // so here is complete solution 
 
-function countDigits(n){
-    
-    if(n==0) return 1;
-    
+function countDigits(n) {
+
+    if (n == 0) return 1;
+
     let count = 0;
     n = Math.abs(n);
-    while(n>0){
-        n = Math.floor(n/10);
+    while (n > 0) {
+        n = Math.floor(n / 10);
         count++;
     }
     return count;
@@ -405,14 +405,14 @@ console.log(countDigits(-10))
 
 // 16. WAP to Check Given Number is Palendrom Or Not
 
-function isPalendrome(n){
-    if(n<0) return false
+function isPalendrome(n) {
+    if (n < 0) return false
     let nCopy = n;
     let rev = 0
-    while(n>0){
-        let rem = n%10;
-        rev = (rev*10) + rem;
-        n = Math.floor(n/10);
+    while (n > 0) {
+        let rem = n % 10;
+        rev = (rev * 10) + rem;
+        n = Math.floor(n / 10);
     }
     return rev == nCopy
 }
@@ -421,17 +421,17 @@ console.log(isPalendrome(12121));
 
 // 17. Reverse an integer
 
-function ReverseInterger(n){
+function ReverseInterger(n) {
     let ReversedInt = ""
-    if(n<0){
+    if (n < 0) {
         ReversedInt = "-";
     }
     n = Math.abs(n);
 
-    while (n > 0){
-        let lastInt = n%10;
+    while (n > 0) {
+        let lastInt = n % 10;
         ReversedInt += lastInt + " ";
-        n = Math.floor(n/10);
+        n = Math.floor(n / 10);
     }
     return ReversedInt;
 }
@@ -442,11 +442,11 @@ console.log(ReverseInterger(-123))
 
 // 18. Array mein sum of all elements find karo
 
-let array = [1,2,3,4,5];  // Output  - 15
+let array = [1, 2, 3, 4, 5];  // Output  - 15
 
 const sum = (array) => {
     let result = 0;
-    for(let i=0 ; i<array.length ; i++){
+    for (let i = 0; i < array.length; i++) {
         console.log(array[i])
         result += array[i];
     }
@@ -456,31 +456,31 @@ console.log(sum(array));
 
 // 19. Array mein positive, negative aur zero count karo.
 
-let array = [1,2,3] // [3,2,1]
+let array = [1, 2, 3] // [3,2,1]
 
-function reverseArray(array){
+function reverseArray(array) {
     let reversed = [];
 
-    for(let i=array.length-1 ; i>=0 ; i--){
+    for (let i = array.length - 1; i >= 0; i--) {
         console.log(array[i]);
         reversed.push(array[i]);
     }
 
     return reversed
-}       
+}
 
 console.log(reverseArray(array));
 
 // 20. Array sorted ascending hai ya nahi check karo.
 
-let array1 = [1,2,3,4,5] // true
-let array2 = [1,-3,2,4,0] // false
+let array1 = [1, 2, 3, 4, 5] // true
+let array2 = [1, -3, 2, 4, 0] // false
 
-function checkSorted(array){
-    for(let i=0 ; i<array.length ; i++){
-        if(array[i]>array[i+1]){
-            console.log(`${array[i]} ${array[i+1]}`);
-            return false 
+function checkSorted(array) {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > array[i + 1]) {
+            console.log(`${array[i]} ${array[i + 1]}`);
+            return false
         }
     }
     return true
@@ -490,18 +490,18 @@ console.log(checkSorted(array2));
 
 // 21. Second smallest distinct element find karo.
 
-let array = [-1,-3,4,5,7,9,2,4,8]
+let array = [-1, -3, 4, 5, 7, 9, 2, 4, 8]
 
-function secondSmallest(array){
+function secondSmallest(array) {
     let firstSmallest = Infinity;
     let secondSmallest = Infinity;
 
-    for(let i=0 ; i<array.length ; i++){
-        if(firstSmallest>array[i]){
-            secondSmallest=firstSmallest;            firstSmallest=array[i];
-            
+    for (let i = 0; i < array.length; i++) {
+        if (firstSmallest > array[i]) {
+            secondSmallest = firstSmallest; firstSmallest = array[i];
+
         }
-        else if(secondSmallest>array[i] && array[i] != firstSmallest){
+        else if (secondSmallest > array[i] && array[i] != firstSmallest) {
             secondSmallest = array[i];
         }
     }
@@ -528,14 +528,14 @@ function sumOfNum(num) {
 
 console.log(sumOfNum(num)); // 6
 
-let num =  -123;
+let num = -123;
 
-function sumOfNum(num){
+function sumOfNum(num) {
     let result = 0;
     num = Math.abs(num)
     num = String(num);
 
-    for(let i=0 ; i<num.length ; i++){
+    for (let i = 0; i < num.length; i++) {
         result = Number(result) + Number(num[i])
     }
     return result
@@ -545,14 +545,14 @@ console.log(sumOfNum(num));
 
 //23. Number ka largest digit find karo
 let num = 1293;
-function findLargest(num){
+function findLargest(num) {
     let largest = -Infinity;
-    while(num>0){
-        let last = num%10;
-        if(largest < last){
+    while (num > 0) {
+        let last = num % 10;
+        if (largest < last) {
             largest = last
         }
-        num = Math.floor(num/10);
+        num = Math.floor(num / 10);
     }
 
     return largest
@@ -561,21 +561,21 @@ function findLargest(num){
 console.log(findLargest(num));
 
 //24. Array mein duplicate elements find karo
-let array = [1,2,3,5,6,8,10,3,6,1];
+let array = [1, 2, 3, 5, 6, 8, 10, 3, 6, 1];
 
-function findDuplicate(array){
+function findDuplicate(array) {
     let duplicateElements = []
-    for(let i=0 ; i<array.length ; i++){
-            let count = 0
-        for(let j=0 ; j<array.length ; j++){
-            if(array[i] == array[j]){
-                count ++;
+    for (let i = 0; i < array.length; i++) {
+        let count = 0
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                count++;
 
             }
         }
-            if(count>1 && !duplicateElements.includes(array[i])){
-                duplicateElements.push(array[i]);
-            }
+        if (count > 1 && !duplicateElements.includes(array[i])) {
+            duplicateElements.push(array[i]);
+        }
     }
 
     return duplicateElements;
@@ -584,38 +584,38 @@ console.log(findDuplicate(array));
 
 //25. Array se duplicates remove karo
 
-let array = [1,2,3,5,6,8,10,3,6,1,-1,-1,-3];
+let array = [1, 2, 3, 5, 6, 8, 10, 3, 6, 1, -1, -1, -3];
 
-function uniqueArray(array){
-     let newArray = [];
+function uniqueArray(array) {
+    let newArray = [];
 
-     for(let i=0 ; i<array.length ; i++){
-        if(!newArray.includes(array[i])){
+    for (let i = 0; i < array.length; i++) {
+        if (!newArray.includes(array[i])) {
             newArray.push(array[i])
         }
-     }
+    }
     return newArray;
 }
 console.log(uniqueArray(array));
 
 // 26. Array mein saare zeros ko end mein move karo.
 
-let array = [0,0,1,0,3,12]  // [1,3,12,0,0]
+let array = [0, 0, 1, 0, 3, 12]  // [1,3,12,0,0]
 
-function endZero(array){
+function endZero(array) {
     let count = 0;
     let newArray = [];
 
-    for(let i=0 ; i<array.length ; i++){
-        if(array[i]==0){
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == 0) {
             count++;
-            array.splice(i , 1);
+            array.splice(i, 1);
             i--
         }
     }
     newArray = [...array];
 
-    for(let i=0 ; i<count ; i++){
+    for (let i = 0; i < count; i++) {
         newArray.push(0);
     }
     return newArray;
@@ -624,16 +624,16 @@ function endZero(array){
 console.log(endZero(array));
 
 // 27.  1 → n mein missing number find karo.
-let array = [1,2,3,4,5,6,7,9]  // 8
+let array = [1, 2, 3, 4, 5, 6, 7, 9]  // 8
 
-function findMissing(array){
+function findMissing(array) {
     let counting = [];
-    for(let i=1 ; i<=array.length+1 ; i++){
+    for (let i = 1; i <= array.length + 1; i++) {
         counting.push(i);
     }
 
-    for(let i=0 ; i<=array.length ; i++){
-        if(array[i] != counting[i]){
+    for (let i = 0; i <= array.length; i++) {
+        if (array[i] != counting[i]) {
             return counting[i]
         }
     }
@@ -643,19 +643,19 @@ console.log(findMissing(array));
 
 // 28. Array ka first duplicate element find karo.
 
-let array = [1,2,3,3,4,5,6] // 2
+let array = [1, 2, 3, 3, 4, 5, 6] // 2
 
-function findDuplicate(array){
+function findDuplicate(array) {
 
     let arr = [];
-    for(let i=0 ; i<array.length ; i++){
-        let count=0
-        for(let j=0 ; j<array.length ; j++){
-            if(array[i] == array[j]){
+    for (let i = 0; i < array.length; i++) {
+        let count = 0
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j]) {
                 count++
             }
         }
-        if(count>1 && !arr.includes(array[i])){
+        if (count > 1 && !arr.includes(array[i])) {
             arr.push(array[i])
         }
     }
@@ -666,28 +666,28 @@ console.log(findDuplicate(array));
 
 // 29. Third largest distinct element find karo.
 
-let array = [1,1,2,3,4,5];
+let array = [1, 1, 2, 3, 4, 5];
 
-function findThirdLargest(array){
+function findThirdLargest(array) {
     let first = -Infinity;
     let sec = -Infinity;
     let third = -Infinity;
 
     let arr = [...new Set(array)]
     console.log(arr)
-    for(let i=0 ; i<arr.length ; i++){
-        if(first<arr[i]){
-            third =sec;
+    for (let i = 0; i < arr.length; i++) {
+        if (first < arr[i]) {
+            third = sec;
             sec = first
-            first=arr[i]; 
+            first = arr[i];
         }
 
-        else if(sec<arr[i]){
+        else if (sec < arr[i]) {
             third = sec;
             sec = arr[i];
         }
 
-        else if(third<arr[i]){
+        else if (third < arr[i]) {
             third = arr[i];
         }
     }
@@ -701,16 +701,16 @@ console.log(findThirdLargest(array));
 
 let num = 9
 
-function checkPrime(num){
-    let count = 0 ;
+function checkPrime(num) {
+    let count = 0;
 
-    for(let i=1 ; i<=num ; i++){
-        if(num%i==0){
+    for (let i = 1; i <= num; i++) {
+        if (num % i == 0) {
             count++;
         }
     }
 
-    if(count>2) return false
+    if (count > 2) return false
 
     else return true
 
@@ -723,28 +723,28 @@ console.log(checkPrime(num));
 
 let num = 370;
 
-function isArmstrong(num){
+function isArmstrong(num) {
     let sum = 0;
     let arr = String(num).split("");
-    for(let i=0 ; i<arr.length ; i++){
-        sum += Number(arr[i])**3;
+    for (let i = 0; i < arr.length; i++) {
+        sum += Number(arr[i]) ** 3;
     }
-    if(sum==num) return true;
+    if (sum == num) return true;
     else return false
 }
 
 console.log(isArmstrong(num))
 
 // 32. Do arrays ka intersection find karo.
-let arr1 = [1,2,3,4]
-let arr2 = [3,4,5,6]
+let arr1 = [1, 2, 3, 4]
+let arr2 = [3, 4, 5, 6]
 //→ [3,4]
 
-function findIntersection(arr1 , arr2){
+function findIntersection(arr1, arr2) {
     let inter = [];
-    for(let i=0 ; i<arr1.length ; i++){
-        for(let j=0 ; j<arr2.length ; j++){
-            if(arr1[i] == arr2[j]){
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] == arr2[j]) {
                 inter.push(arr1[i]);
             }
         }
@@ -753,18 +753,18 @@ function findIntersection(arr1 , arr2){
     return inter;
 }
 
-console.log(findIntersection(arr1 , arr2))
+console.log(findIntersection(arr1, arr2))
 
 // 33. Do arrays ka union find karo.
 
-let arr1 = [1,2,3,4];
-let arr2 = [3,4,5,6,7,8];
+let arr1 = [1, 2, 3, 4];
+let arr2 = [3, 4, 5, 6, 7, 8];
 
-function findUnion(arr1 , arr2){
+function findUnion(arr1, arr2) {
     let union = [];
 
-    for(let i=0 ; i<arr2.length ; i++){
-        if(!arr1.includes(arr2[i])){
+    for (let i = 0; i < arr2.length; i++) {
+        if (!arr1.includes(arr2[i])) {
             arr1.push(arr2[i]);
         }
     }
@@ -772,22 +772,22 @@ function findUnion(arr1 , arr2){
     return arr1;
 }
 
-console.log(findUnion(arr1 , arr2));
+console.log(findUnion(arr1, arr2));
 
 // 34. Array mein maximum frequency wala element find karo
 
-const array = [1,2,3,4,5,6,1,2,3,4,5,6,7,1,2,3,4,2 ,2,3,2];
+const array = [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 2, 2, 3, 2];
 
-function maximumFrequency(array){
+function maximumFrequency(array) {
     let counts = {
-        
+
     }
 
-    for(let i=0 ; i<array.length ; i++){
-        let count=0;
-        for(let j=0 ; j<array.length ; j++){
-            if(array[i]==array[j]){
-                count=count+1;
+    for (let i = 0; i < array.length; i++) {
+        let count = 0;
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                count = count + 1;
             }
         }
         counts[array[i]] = count;
@@ -796,14 +796,34 @@ function maximumFrequency(array){
     let max = 0;
     let maxkey;
 
-    for(let key in counts){
-        if(counts[key]>max){
+    for (let key in counts) {
+        if (counts[key] > max) {
             max = counts[key];
             maxkey = key
         }
     }
-    
+
     return maxkey
 }
 
 console.log(maximumFrequency(array));
+
+// 35. Array mein first non-repeating element find karo
+
+let array = [1, 2, 3, 4, 5, 6, 1, 3, 4,];
+
+function findFirstNonRepeating(array) {
+    for (let i = 0; i < array.length; i++) {
+        let count = 0;
+        for (let j = 0; j < array.length; j++) {
+            if (array[i] == array[j]) {
+                count++;
+            }
+        }
+        if (count === 1) {
+            return array[i]
+        }
+    }
+}
+
+console.log(findFirstNonRepeating(array));
